@@ -71,7 +71,7 @@ current_dir=$(pwd)/
 
 tmux new -s "xmr" -d "/bin/bash"
 
-tmux send-keys -t "xmr" "./monerod --data-dir ~/blockchain --rpc-bind-ip $IPV4 --confirm-external-bind --public-node --restricted-rpc --no-zmq --no-igd --enable-dns-blocklist --out-peers 50 --in-peers 600 --limit-rate 500000 --ban-list=banlist.txt" C-m
+tmux send-keys -t "xmr" "${current}monerod --data-dir ~/blockchain --rpc-bind-ip $IPV4 --confirm-external-bind --public-node --restricted-rpc --no-zmq --no-igd --enable-dns-blocklist --out-peers 50 --in-peers 600 --limit-rate 500000 --ban-list=banlist.txt" C-m
 
 echo tmux a [Enter] to view process
 
