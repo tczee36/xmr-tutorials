@@ -75,7 +75,7 @@ tmux send-keys -t "xmr" "${current_dir}monerod --data-dir ~/blockchain --rpc-bin
 
 echo tmux a [Enter] to view process
 
-echo ./monerod --data-dir ~/blockchain --rpc-bind-ip $IPV4 --confirm-external-bind --public-node --restricted-rpc --no-zmq --no-igd --enable-dns-blocklist --out-peers 50 --in-peers 600 --limit-rate 500000 --ban-list=banlist.txt >>run_node.sh
+echo ./monerod --data-dir ~/blockchain --rpc-bind-ip $(wget -qO - icanhazip.com) --confirm-external-bind --public-node --restricted-rpc --no-zmq --no-igd --enable-dns-blocklist --out-peers 50 --in-peers 600 --limit-rate 500000 --ban-list=banlist.txt >>run_node.sh
 echo “ ”
 echo “bash run_node.sh” to start node
 
